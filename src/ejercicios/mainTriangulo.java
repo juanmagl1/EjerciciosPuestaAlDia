@@ -9,6 +9,7 @@ public class mainTriangulo {
 		Scanner teclado = new Scanner(System.in);
 		Rectangulo r1= new Rectangulo(8,2);
 		System.out.println(r1);
+		System.out.println(r1.perimetro(2, 8));
 		
 		Rectangulo r2= new Rectangulo(22,22);
 		System.out.println(r2);
