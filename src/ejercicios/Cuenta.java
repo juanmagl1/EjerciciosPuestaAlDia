@@ -29,13 +29,24 @@ public int getNumingreso() {
 public String getNumcuenta() {
 	return numcuenta;
 }
-public void ingreso(double cantidad) {
-	this.saldo=saldo+cantidad;
-	this.numingreso++;
+
+public void ingreso(double cantidad)throws Exception {
+	if (cantidad<0) {
+		throw new Exception("Introduzca un saldo positivo");
+	}else {
+		this.saldo=saldo+cantidad;
+		this.numingreso++;
+	}
+	
 }
-public void reintegro(double cantidad) {
-	this.saldo=saldo-cantidad;
-	this.numreintegro++;
+public void reintegro(double cantidad) throws Exception {
+	if(cantidad<0) {
+		throw new Exception("Introduzca un saldo positivo");
+	}else {
+		this.saldo=saldo-cantidad;
+		this.numreintegro++;
+	}
+	
 }
 @Override
 public String toString() {
