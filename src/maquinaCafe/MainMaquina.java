@@ -11,7 +11,7 @@ public class MainMaquina {
 			Maquina m1=new Maquina(50);
 			System.out.println(m1);
 			int opcion=0;
-			while(opcion<6) {
+			while(opcion<5) {
 				System.out.println("1.Servir café solo (1 euro) "
 						+ "2.Servir leche (0,8 euros)"
 						+ "3.Servir café con leche (1,5 euros)"
