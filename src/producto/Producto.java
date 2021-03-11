@@ -32,8 +32,8 @@ public class Producto {
 		this.codigo = codigo;
 	}
 	public Double PrecioconIva() {
-		this.precio=precio + precio*IVA;
-		return precio;
+		this.precio=precio;
+		return precio+precio*IVA;
 	}
 	@Override
 	public String toString() {
