@@ -33,9 +33,13 @@ public String getMensaje3() {
 public void setMensaje3(String mensaje3) {
 	this.mensaje3 = mensaje3;
 }
-public int enviarMensaje(String mensaje) {
+public int enviarMensaje(String mensaje) throws Exception{
+	if(numMensajes==3) {
+		throw new Exception("Buzón lleno, no permite más mensajes");
+	}
+	
 	if (numMensajes==0) {
-		this.mensaje1=mensaje2;
+		this.mensaje1=mensaje1;
 		numMensajes++;
 		
 	}else if(numMensajes==1) {
@@ -44,18 +48,15 @@ public int enviarMensaje(String mensaje) {
 	}else if (numMensajes==2) {
 		this.mensaje3=mensaje3;
 		numMensajes++;
-	}else if(numMensajes==3) {
-		
-		System.out.println("Buzón lleno no permite mas mensajes");
 	}
 	return numMensajes;
 }
-public int borrarMensajes(String cadena) {
+public void borrarMensajes() {
 	numMensajes=0;
 	this.mensaje1="";
 	this.mensaje2="";
 	this.mensaje3="";
-	return numMensajes;
+	
 }
 public void borrarUnMensaje(int mensaje)throws Exception {
 	if (numMensajes<0 || numMensajes>3) {
